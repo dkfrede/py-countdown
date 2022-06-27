@@ -2,9 +2,6 @@ import time
 import os
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
-def reset():
-    cls()
-    start()
   
 def start():
   start = input("Type start to start the countdown \n")
@@ -20,10 +17,7 @@ def start():
         else:
           cls()
           print("Times up!")
-          still = input("Please type reset to reset the timer \n")
-
-          if still == "reset":
-            reset()
-            
-            break
+          input("Press any button to reset \n")
+          cls()
+          start()
 start()
